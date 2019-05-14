@@ -16,3 +16,27 @@ var bestPoints = function(array) {
 }
 
 bestPoints(arrayPoints);
+
+
+var calcMedianTop3 = function (array, x) {
+
+    array.sort(function(a, b) {
+        return b - a; 
+        }
+    )
+
+    var sum = 0;
+    for (var i=0; i < x; i++) 
+    {
+        sum += array[i];
+        console.log(array[i]);
+        console.log(sum);
+    }
+    console.log(sum);
+    return sum/x;
+
+};
+
+
+calcMedianTop3(arrayPoints, 3);
+console.log(calcMedianTop3(arrayPoints, 3));
